@@ -1,41 +1,33 @@
-import java.util.Scanner;
+import modelo.Pelicula;
+import modelo.Serie;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Bienvenidos a la inmersión Java!");
-        //System.out.println("Película Matrix");
-        //Declaración de variables
-        int fechaDeLanzamiento = 1999;
-        double evaluacion = 4.5;
-        boolean incluidoEnElPlanBasico = true;
-        String nombre = "Matrix";
-        String sinopsis = """
-                La mejor película de fin del milenio
-                """;
-        double mediaEvaluacionUsuario = 0;
+        Principal principal = new Principal();
+        principal.muestraElMenu();
 
-        System.out.println("Pelicula: " + nombre);
-        System.out.println(fechaDeLanzamiento);
-        System.out.println(evaluacion);
-        System.out.println(incluidoEnElPlanBasico);
+        /*
+        Pelicula matrix = new Pelicula();
+        matrix.setNombre("Matrix");
+        matrix.setTiempoDeDuracionEnMinutos(120);
+        matrix.setFechaDeLanzamiento(1999);
+        matrix.muestraFichaTecnica();
 
-        double mediaEvaluacion = (4.5 + 4.8 + 3.0) / 3;
-        System.out.println("Media de la evaluación de Matrix: "+ mediaEvaluacion);
+        Pelicula encanto = new Pelicula();
+        encanto.setNombre("Encanto");
+        encanto.setTiempoDeDuracionEnMinutos(120);
+        encanto.setFechaDeLanzamiento(2022);
+        encanto.muestraFichaTecnica();
 
-        if(fechaDeLanzamiento > 2023){
-            System.out.println("Película popular en el momento");
-        }else{
-            System.out.println("Pelicula retro que vale la pena ver");
-        }
+        Serie friends = new Serie();
+        friends.setNombre("Friends");
+        friends.setFechaDeLanzamiento(1996);
+        friends.setTemporadas(10);
+        friends.setEpisodiosPorTemporada(22);
+        friends.setDuracionEnMinutosPorEpisodio(30);
+        friends.muestraFichaTecnica();
+        */
 
-        for (int i = 0; i < 3; i++) {
-            Scanner teclado = new Scanner(System.in);
-            System.out.println("Ingresa la nota que le darás a Matrix: ");
-            double notaMatrix = teclado.nextDouble();
 
-            mediaEvaluacionUsuario = mediaEvaluacionUsuario + notaMatrix;
-        }
-        System.out.println("La media de la pelicula " +
-                "Matrix calculada por el usuario es: " + mediaEvaluacionUsuario/3);
     }
 }
